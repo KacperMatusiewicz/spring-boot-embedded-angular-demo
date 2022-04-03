@@ -1,0 +1,12 @@
+<mat-card>
+  <form class="searchForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput type="text" id="searchBox" placeholder="Search smth" name="searchField"[(ngModel)]="searchField">
+    </mat-form-field>
+      <input  checked type="radio" name="searchMode" id="searchModeName" [value] = "true" [(ngModel)]="searchModeName"> Name
+      <input type="radio" name="searchMode" id="searchModeLastName" [value] = "false" [(ngModel)]="searchModeName"> Lastname
+    <p>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </p>
+  </form>
+</mat-card>
